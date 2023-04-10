@@ -1,0 +1,36 @@
+[
+  {
+    "userid": 1,
+    "email": "isidro_von@hotmail.com",
+    "name": "Torrey Todd",
+    "company": "Hilll, Mayert and Wolf",
+    "vin": "02349024",
+    "activeSince ": "Feb 02, 2023",
+    "shipment": "SHP001",
+    "type": "Admin"
+  },
+  {
+    "userid": 2,
+    "email": "isidro_von@hotmail.com",
+    "name": "Torrey Todd",
+    "company": "Hilll, Mayert and Wolf",
+    "vin": "02349022",
+    "activeSince ": "Feb 02, 2023",
+    "shipment": "SHP001",
+    "type": "Driver"
+  },
+  {
+    "userid": 3,
+    "email": "kang@hotmail.com",
+    "name": "Kang Juliet",
+    "company": "ABE Transportation",
+    "vin": "02349023",
+    "activeSince ": "Feb 11, 2021",
+    "shipment": "SHP005",
+    // SHipment should be array 
+    // Active shipoment - Number
+    // Finsihed Shipment - Number
+    // Pending Shipment - Number 
+    "type": "Driver"
+  }
+]

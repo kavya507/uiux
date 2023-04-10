@@ -1,0 +1,30 @@
+Shipment service 
+
+Admin  - Can Create, Delete and update  shipment
+         Can Create , Delete and update Drivers
+         
+Driver - Can see his assigned shipment
+         Can Update once shipment is completed
+
+Homepage (Login)
+
+        Admin 
+            Show Dashboard (KPIs,List of drivers and List of shipment)
+        Driver
+            -List of drivers
+            - Add, Del and update 
+        Shipment
+            -List of Shipment
+            - Add, Del and update 
+            
+
+Creating user
+
+-   Name, Last Name *
+-   Email +
+-   Vehicle Number +
+-   Licence Number +
+-   Age + 
+-   Gender + 
+-   Phone Number + 
+-   Active Since 

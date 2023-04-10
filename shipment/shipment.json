@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Hair Roller",
+    "number": "SHP001",
+    "type": "Electronic",
+    "weight": "2 lbs",
+    "amount": "$56",
+    "origin": "4400 University Dr",
+    "destination": "4235 Mason Oak Ct",
+    "assigned Driver": "Shane Cox"
+  },
+  {
+    "name": "Hair Roller",
+    "number": "SHP001",
+    "type": "Electronic",
+    "weight": "2 lbs",
+    "amount": "$56",
+    "origin": "4400 University Dr",
+    "destination": "4235 Mason Oak Ct",
+    "assigned Driver": "Shane Cox"
+  },
+  {
+    "name": "Hair Roller",
+    "number": "SHP001",
+    "type": "Electronic",
+    "weight": "2 lbs",
+    "amount": "$56",
+    "origin": "4400 University Dr",
+    "destination": "4235 Mason Oak Ct",
+    "assigned Driver": "Shane Cox"
+  },
+  {
+    "name": "Hair Roller",
+    "number": "SHP001",
+    "type": "Electronic",
+    "weight": "2 lbs",
+    "amount": "$56",
+    "origin": "4400 University Dr",
+    "destination": "4235 Mason Oak Ct",
+    "assigned Driver": "Shane Cox"
+  }
+]

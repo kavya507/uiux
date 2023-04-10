@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>User Management</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+      <style>
+         /* Customize the top navbar */
+   
+        .container {
+            margin-top: 51px;
+               margin-right: 50px
+         }
+   
+           .container_inside {
+            margin-top: 70px;
+               margin-right: 50px
+               margin-left: 50px
+         }
+         .card {
+            height: 180px;
+            margin-bottom: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+         }
+         
+         .my-button {
+           cursor: pointer;
+           transition: all 0.2s ease;
+         }
+   
+         
+            .navigation_top {
+           background-color: #333;
+           color: #fff;
+           overflow: hidden;
+            }
+            .navigation_top a {
+            color: #fff;
+            display: inline-block;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+           
+            .active {
+              background-color: #4CAF50;
+           }
+         
+         .sidenav {
+            background-color: #555;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 56px;
+            overflow-x: hidden;
+            padding-top: 20px;
+         }
+         .my-button {
+            background-color: coral;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 28px;
+            padding: 10px;
+            text-align: center;
+            transition: all 0.2s ease;
+         }
+   
+         .my-button1 {
+            background-color:  #ffc107;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 28px;
+            padding: 10px;
+            text-align: center;
+            transition: all 0.2s ease;
+         }
+         a:link, a:visited {
+     color: white;
+   }
+         .my-button2 {
+            background-color: teal;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 28px;
+            padding: 10px;
+            text-align: center;
+            transition: all 0.2s ease;
+         }
+   
+         /* .my-button:hover {
+         transform: scale(1.05);
+         }
+         .my-button1:hover {
+         transform: scale(1.05);
+         }
+         .my-button2:hover {
+         transform: scale(1.05);
+         } */
+         .sidenav a {
+            color: #fff;
+            display: block;
+            padding: 16px;
+            text-decoration: none;
+         }
+         .sidenav a:hover {
+            background-color: #ddd;
+            color: #333;
+         }
+         
+         
+         .sidenav .subnav a:hover {
+            background-color: #444;
+            color: #fff;
+         }
+         
+         .main {
+            margin-top: 56px;
+            margin-left: 200px;
+            padding: 20px;
+            overflow: hidden;
+         }
+         
+       </style>
+   </head>
+   <body>
+        
+      <!-- Top navbar -->
+      <div class="navigation_top">
+         <a class="active" href="#">Home</a>
+         
+      </div>
+
+      <!-- Side navbar -->
+      <div class="sidenav">
+         <a href="dashboard.html">Dashboard</a>
+         <a href="shipments.html">Shipments</a>
+         <a href="users.html">Users Management</a>
+         <a href="terms.html">Terms & Conditions</a>
+         <a href="#">Settings</a>
+      </div>
+
+      <div class="container">
+         <table class="table table-bordered table-hover table-striped caption-top">
+            <caption>Users Management</caption>
+            <thead>
+               <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Type</th>
+                  <th>VIN</th>
+                  <th>License Plate</th>
+                  <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>Vinay</td>
+                  <td>Kumar</td>
+                  <td>01</td>
+                  <td>123124141</td>
+                  <td>VIN1234</td>
+                  <td>Admin</td>
+               </tr>
+               <tr>
+                  <td>Kavya</td>
+                  <td>Baltha</td>
+                  <td>01</td>
+                  <td>34452323</td>
+                  <td>KAV86637</td>
+                  <td>Admin</td>
+               </tr>
+               <tr>
+                <td>Kevin</td>
+                <td>McNeay</td>
+                <td>02</td>
+                <td>4535454</td>
+                <td>KEV9739</td>
+                <td>Driver</td>
+             </tr>
+            </tbody>
+         </table>
+      </div>
+      <div class="modal fade" id="myModal">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-body">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"
+                     aria-label="Close"></button>
+                  <form>
+                     <br>
+                     <div class="form-check">
+                        <label class="form-check-label" for="buy">BUY</label>
+                        <input type="radio" class="form-check-input" id="buy"
+                           name="trade_type" value="BUY" checked>
+                     </div>
+                     <div class="form-check">
+                        <label class="form-check-label" for="sell">SELL</label>
+                        <input type="radio" class="form-check-input" id="sell"
+                           name="trade_type" value="SELL">
+                     </div>
+                     <div class="my-3">
+                        <label for="quantity" class="form-label">QTY</label>
+                        <input type="text" id="quantity" name="quantity">
+                     </div>
+                     <button type="button" class="btn btn-primary
+                        my-3">Submit</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

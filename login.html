@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+  <style>
+      body{
+        height:100vh;
+        background:#e9eef7;
+       font-family:sans-serif;
+      }
+
+.spContainer{
+  width:100%;
+  max-width:380px
+}
+.card{
+  border-radius:8px;
+  transition:.25s;
+}
+.card:hover{
+  transition:.25s;
+}
+
+.btn-primary{
+  border-radius:4px;
+  border:none;
+  background-color:#ff425f;
+  box-shadow:0px 0px 0px 0px rgba(34, 36, 38, 0.15) inset, 0px -0.4em 0px 0px rgba(34, 36, 38, 0.15) inset;
+}
+.btn-primary:hover,.btn-primary:focus,.btn-primary:active{
+  background-color:#de2c48 !important;
+  box-shadow:none;
+}
+
+.inpSp{
+  background-color:#ebebeb;
+  border:none;
+  transition:.25s;
+  padding-left:25px;
+  font-weight:light !important;
+  font-family: "Times New Roman", Times, serif; 
+  border-radius:4px
+}
+.inpSp:hover{
+  transition:.25s;
+  background-color:#dbdbdb;
+}
+.inpSp:focus{
+  background-color:#ebebeb;
+  box-shadow:0 8px 8px 0px #f1f1f1;
+}
+.regStr{
+  transition:.25s;
+  padding-bottom:4px;
+  border-bottom:2px solid gray;
+  color:#212519;
+}
+.regStr:hover{
+  border-bottom:2px solid #ff425f;
+  padding-bottom:8px;
+  transition:.25s;
+  text-decoration:none;
+  color:#212519;
+}
+
+.btn-sm{
+  font-weight:300;
+}
+.btn-sm:hover{
+  font-weight:900;
+}
+
+
+/* Style the tab */
+.tab {
+
+  /* background-color: #f1f1f1; */
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none; 
+  padding: 6px 12px;
+  border-top: none;
+  
+}
+
+.loginContent {
+  display : block;
+}
+  </style>
+  <body>
+    <div class="mt-5">
+      <div class="spContainer mx-auto">
+        <div class="card px-4 py-5 border-0 shadow">
+          <div class="tab">
+              <button class="tablinks col-6 active" onclick="clickHandle(event, 'login')">Login</button>
+              <button class="tablinks col-6" onclick="clickHandle(event, 'signup')">Sign Up</button>
+          </div>
+
+          <div id="login" class="tabcontent loginContent">
+            <div class="d-inline text-left mb-3">
+              <h3 class="font-weight-bold mt-3"> Welcome back!</h3>
+              <p> </p>
+
+            </div>
+            <div class="d-inline text-center mb-0">
+              <div class="form-group mx-auto">
+                <input class="form-control inpSp" type="text" placeholder="username">
+              </div>
+            </div>
+            <div class="d-inline text-center mb-3">
+              <div class="form-group mx-auto">
+                <input class="form-control inpSp" type="password" placeholder="Password">
+              </div>
+            </div>
+            <div class="d-inline text-left mb-3">
+              <div class="form-group mx-auto" align ="center">
+                <a class="btn btn-primary " href="Dashboard.html">Confirm</a>
+                <a class="small text-black-50 pl-2 ml-2 border-left" href="">Forgot Password?</a>
+              </div>
+            </div>
+            <div class="d-inline text-left mb-1" >
+              <div class="form-group mx-auto mb-0" align = "center">
+                <label class="text-black-50" > Or login with</label>
+              </div>
+            </div>
+            <div class="d-inline">
+              <!-- <div class="form-group row">
+                <button type="button" class="btn btn-sm btn-light col-6"> <i class="vds-icon" role="img" aria-label="google" aria-hidden="false"><svg width="24" height="24" viewBox="0 0 24 24"><g fill="none"><path fill="#4285F4" d="M23.49,12.27 C23.49,11.48 23.42,10.73 23.3,10 L12,10 L12,14.51 L18.47,14.51 C18.18,15.99 17.33,17.24 16.07,18.09 L16.07,21.09 L19.93,21.09 C22.19,19 23.49,15.92 23.49,12.27 Z"></path><path fill="#34A853" d="M12,24 C15.24,24 17.95,22.92 19.93,21.09 L16.07,18.09 C14.99,18.81 13.62,19.25 12,19.25 C8.87,19.25 6.22,17.14 5.27,14.29 L1.29,14.29 L1.29,17.38 C3.26,21.3 7.31,24 12,24 Z"></path><path fill="#FBBC05" d="M5.27,14.29 C5.02,13.57 4.89,12.8 4.89,12 C4.89,11.2 5.03,10.43 5.27,9.71 L5.27,6.62 L1.29,6.62 C0.47,8.24 0,10.06 0,12 C0,13.94 0.47,15.76 1.29,17.38 L5.27,14.29 Z"></path><path fill="#EA4335" d="M12,4.75 C13.77,4.75 15.35,5.36 16.6,6.55 L20.02,3.13 C17.95,1.19 15.24,0 12,0 C7.31,0 3.26,2.7 1.29,6.62 L5.27,9.71 C6.22,6.86 8.87,4.75 12,4.75 Z"></path></g></svg></i><span class="badge text-white"><i class="fab fa-google text-danger"></i></span>
+                          Google
+                </button>
+                  <button type="button" class="btn btn-sm btn-light col-6">
+                    <i class="vds-icon" role="img" aria-label="facebook" aria-hidden="false"><svg width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path fill="#1877F2" d="M24,12 C24,5.37257812 18.6274219,0 12,0 C5.37257813,0 0,5.37257812 0,12 C0,17.9895469 4.38822656,22.9539844 10.125,23.8541719 L10.125,15.46875 L7.078125,15.46875 L7.078125,12 L10.125,12 L10.125,9.35625 C10.125,6.34875 11.9165391,4.6875 14.6575547,4.6875 C15.9705,4.6875 17.34375,4.921875 17.34375,4.921875 L17.34375,7.875 L15.8305547,7.875 C14.3398828,7.875 13.875,8.80000781 13.875,9.74899219 L13.875,12 L17.203125,12 L16.6710937,15.46875 L13.875,15.46875 L13.875,23.8541719 C19.6117734,22.9539844 24,17.9895469 24,12"></path><path fill="#FFF" d="M16.6710938,15.46875 L17.203125,12 L13.875,12 L13.875,9.74899219 C13.875,8.80000781 14.3398828,7.875 15.8305547,7.875 L17.34375,7.875 L17.34375,4.921875 C17.34375,4.921875 15.9705,4.6875 14.6575547,4.6875 C11.9165391,4.6875 10.125,6.34875 10.125,9.35625 L10.125,12 L7.078125,12 L7.078125,15.46875 L10.125,15.46875 L10.125,23.8541719 C10.7359453,23.9500312 11.362125,24 12,24 C12.637875,24 13.2640547,23.9500312 13.875,23.8541719 L13.875,15.46875 L16.6710938,15.46875 Z"></path></g></svg></i><span class="badge text-white"><i class="fab fa-facebook-f text-primary"></i></span>
+                        Facebook
+                   </button> 
+              </div> -->
+              <!-- <div class="row">
+                
+                  <a class="btn pl-3 col-6" href="" role="button" style="text-transform:none">
+                    <img width="20px" style="margin-bottom:3px;" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                     Google
+                  </a>
+                  <a class="btn btn-outline col-6"  href="3" role="button" style="text-transform:none">
+                    <i role="img" aria-label="facebook" aria-hidden="false"><svg width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path fill="#1877F2" d="M24,12 C24,5.37257812 18.6274219,0 12,0 C5.37257813,0 0,5.37257812 0,12 C0,17.9895469 4.38822656,22.9539844 10.125,23.8541719 L10.125,15.46875 L7.078125,15.46875 L7.078125,12 L10.125,12 L10.125,9.35625 C10.125,6.34875 11.9165391,4.6875 14.6575547,4.6875 C15.9705,4.6875 17.34375,4.921875 17.34375,4.921875 L17.34375,7.875 L15.8305547,7.875 C14.3398828,7.875 13.875,8.80000781 13.875,9.74899219 L13.875,12 L17.203125,12 L16.6710937,15.46875 L13.875,15.46875 L13.875,23.8541719 C19.6117734,22.9539844 24,17.9895469 24,12"></path><path fill="#FFF" d="M16.6710938,15.46875 L17.203125,12 L13.875,12 L13.875,9.74899219 C13.875,8.80000781 14.3398828,7.875 15.8305547,7.875 L17.34375,7.875 L17.34375,4.921875 C17.34375,4.921875 15.9705,4.6875 14.6575547,4.6875 C11.9165391,4.6875 10.125,6.34875 10.125,9.35625 L10.125,12 L7.078125,12 L7.078125,15.46875 L10.125,15.46875 L10.125,23.8541719 C10.7359453,23.9500312 11.362125,24 12,24 C12.637875,24 13.2640547,23.9500312 13.875,23.8541719 L13.875,15.46875 L16.6710938,15.46875 Z"></path></g></svg></i><span class="badge text-white"><i class="fab fa-facebook-f text-primary"></i></span>
+                    
+                    <img width="20px" style="margin-bottom:3px;" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                    <span>Facebook</span>
+
+                    
+                  </a>
+        
+              </div> -->
+              <div class="row">
+                
+                <a href="#" class=" btn col-6">
+                  <i class="fa fa-facebook fa-fw"></i>
+                </a>
+                
+                <a href="#" class=" btn  col-6">
+                  <i class="fa fa-google" aria-hidden="true"></i>
+                 </a>
+                
+              
+      
+            </div>
+            </div>
+          </div>
+          <div id="signup" class="tabcontent">
+            <div class="row">
+              <div class="spContainer mx-auto">
+                <div class="card px-4  border-0 shadow">
+                  <div class="d-inline text-left mb-3">
+                    <h3 class="font-weight-bold mt-3"> Register Here !!</h3>
+                    <p> </p>
+                  </div>
+                  <div class="d-inline text-center mb-0">
+                    <div class="form-group mx-auto">
+                      <input class="form-control inpSp" type="text" placeholder="Name">
+                    </div>
+                  </div>
+            <div class="d-inline text-center mb-0">
+              <div class="form-group mx-auto">
+                <input class="form-control inpSp" type="text" placeholder="Email">
+              </div>
+            </div>
+            <div class="d-inline text-center mb-0">
+              <div class="form-group mx-auto">
+                <input class="form-control inpSp" type="text" placeholder="Contact Number">
+              </div>
+            </div>
+                  <div class="d-inline text-center mb-0">
+                    <div class="form-group mx-auto">
+                      <input class="form-control inpSp" type="password" placeholder="Password">
+                    </div>
+                  </div>
+            <div class="d-inline text-center mb-0">
+              <div class="form-group mx-auto">
+                <input class="form-control inpSp" type="password" placeholder="Confirm Password">
+              </div>
+              </div>
+                  <div class="d-inline text-left mb-3">
+                    <div class="form-group mx-auto" align = "Center">
+                        <button class="btn btn-primary" formaction="file:///Users/kavyabaltha/Desktop/HomePage%20copy.html#" >Submit</button>
+                      
+                      
+                    </div>
+                  </div>
+                  <div class="d-inline text-left mb-1">
+                    <div class="form-group mx-auto mb-0">
+                      <label class="text-black-50 small">or login with</label>
+                    </div>
+                  </div>
+                  <div class="d-inline text-left">
+                    <div class="form-group mx-auto">
+                      <button type="button" class="btn btn-sm btn-light"> <span class="badge text-white"><i class="fab fa-google text-danger"></i></span>
+            Google
+          </button>
+                      <button type="button" class="btn btn-sm btn-light ml-2"> <span class="badge text-white"><i class="fab fa-facebook-f text-primary"></i></span>
+            Facebook
+          </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </body>
+  
+<script>
+
+
+  let tabcontent;
+  let  t;
+
+  t = document.getElementById("Cat")
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  tabcontent[0].style.display = "active";
+
+  console.log(t);
+  function clickHandle(evt, animalName) {
+    let i, tabcontent, tablinks;
+  
+    // This is to clear the previous clicked content.
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+  
+    // Set the tab to be "active".
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+  
+    // Display the clicked tab and set it to active.
+    document.getElementById(animalName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  </script>
+</html>
