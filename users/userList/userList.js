@@ -16,6 +16,12 @@ fetch('../newusers.json')
 					updateButton.textContent = 'Update';
 					updateButton.addEventListener('click', () => {
 						// Handle update button click here
+						const queryParams = new URLSearchParams({
+							userID: `${jsonData[i]['userID']}`
+						});
+						sessionStorage.setItem('userID', `${jsonData[i]['userID']}`);
+          				window.location.href = "/uiux/users/update/updateUser.html?userID=" + queryParams.userID;
+						console.log("DEF:",window.location.href)
 						console.log(`Update button clicked for user ID ${jsonData[i]['userID']}`);
 					});
 

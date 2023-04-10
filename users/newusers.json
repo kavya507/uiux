@@ -7,9 +7,9 @@
     "phone_number": "555-555-5555",
     "age": "25",
     "gender": "female",
-    "license_number": "123456789",
-    "vin_number": "1GKS2BKC1FR210716",
-    "active_since": "2022-03-15"
+    "lnumber": "r123456789",
+    "vnumber": "w1GKS2BKC1FR210716",
+    "active": "2022-03-15"
   },
   {
     "userID": 2,
@@ -19,9 +19,9 @@
     "phone_number": "555-555-5555",
     "age": "35",
     "gender": "male",
-    "license_number": "987654321",
-    "vin_number": "1G6KD57YXVU286150",
-    "active_since": "2022-03-15"
+    "lnumber": "w987654321",
+    "vnumber": "w1G6KD57YXVU286150",
+    "active": "2005-03-15"
   },
   {
     "userID": 3,
@@ -31,8 +31,8 @@
     "phone_number": "555-555-5555",
     "age": "30",
     "gender": "male",
-    "license_number": "234567890",
-    "vin_number": "1HGCR2F82FA206607",
-    "active_since": "2022-03-15"
+    "lnumber": "r234567890",
+    "vnumber": "a1HGCR2F82FA206607",
+    "active": "1997-03-15"
   }
 ]
